@@ -1,14 +1,18 @@
 
 package persoas;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class LerObxecto {
     Scanner sc;
-    File fich;
+    
     public void lerObxecto(){
         String linea;
         String[]lista;
@@ -27,8 +31,20 @@ public class LerObxecto {
 }
 }
     public void suspenso(){
+        try {
+            sc=new Scanner (new File("/home/local/DANIELCASTELAO/csampedroromero/Documentos/Persona.txt"));
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(LerObxecto.class.getName()).log(Level.SEVERE, null, ex);
+        }
         String[]suspenso;
                  
         
+    }
+    public void lerficheiro() throws FileNotFoundException{
+//        File fich = new File("....")
+//        FileReader fr = new FileReader (fich);
+//        BufferedReader br = new BufferedReader (fr);
+//        br.readLine();
+//        br.close();
     }
 }
